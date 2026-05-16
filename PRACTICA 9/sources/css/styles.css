@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
-/* ============================================
-   SELECTORES DE ETIQUETA (tag selectors)
-   ============================================ */
+/*
+   SELECTORES DE ETIQUETA
+ */
 
 /* --- Selector de etiqueta 1: body --- */
 body {
     margin: 0;
     padding: 0;
+
     min-height: 100%;
     background-color: rgb(0, 0, 0);
     font-family: 'IBM Plex Mono', monospace;
@@ -46,7 +47,7 @@ section {
 /* --- Selector de etiqueta 5: p --- */
 p {
     color: rgb(240, 239, 239);
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 /* ============================================
@@ -87,62 +88,7 @@ p {
     color: rgb(253, 252, 251);
 }
 
-/* --- Selector de ID 3: #shows-nav --- */
-#shows-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    padding: 30px 40px;
-    border-radius: 0px;
-    gap: 22px;
-    min-width: 340px;
-    max-width: 680px;
-    width: min(90vw, 680px);
-}
 
-#shows-nav li {
-    margin: 0;
-    list-style: none;
-    transition: all 0.10s ease-in-out;
-    padding: 14px 26px;
-    border-radius: 0px;
-    cursor: pointer;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    min-width: 240px;
-    text-align: center;
-}
-
-#shows-nav li:hover {
-    background: rgb(255, 255, 255);
-    color: rgb(145, 145, 145);
-    transform: translateY(-10px);
-}
-
-#shows-nav li.selected {
-    background: rgba(255, 255, 255, 0.18);
-    transform: scale(1.05);
-    font-weight: 700;
-}
-
-#shows-nav.fade-out {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-}
-
-#shows-nav a {
-    font-size: 1.1em;
-    font-weight: 500;
-    color: inherit;
-    text-decoration: none;
-}
 
 /* ============================================
    SELECTORES DE CLASE (class selectors)
@@ -194,17 +140,12 @@ p {
 /* --- Selector de clase 2: .reason ---
    Se aplica a 5 elementos en el HTML */
 .reason {
-    padding: 30px;
-    border: 1px solid rgba(255, 103, 9, 0.3);
-    border-radius: 4px;
+    padding: 40px;
+    margin: 0;
+    border: 0px solid rgba(255, 255, 255, 0.691);
+    border-radius: 0px;
     transition: all 0.3s ease-in-out;
-    background: rgba(255, 103, 9, 0.05);
-}
-
-.reason:hover {
-    border-color: rgb(255, 255, 255);
-    background: rgba(255, 103, 9, 0.15);
-    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .reason h3 {
@@ -212,25 +153,48 @@ p {
     font-size: 1.3em;
     margin: 0 0 15px 0;
     text-transform: uppercase;
+    transition: color 0.3s ease-in-out;   /* para que el cambio sea suave */
 }
 
 .reason p {
     color: rgb(240, 239, 239);
     font-size: 1em;
     margin: 0;
+    transition: color 0.3s ease-in-out;
 }
+
+.reason:hover {
+    border-color: rgba(0, 0, 0, 0);
+    background: rgb(255, 255, 255);
+    transform: translateY(-5px);
+}
+
+.reason:hover h3 {
+    color: rgb(0, 0, 0);
+}
+
+.reason:hover p {
+    color: rgb(0, 0, 0);              /* opcional: también cambia el párrafo */
+}
+
 
 /* --- Selector de clase 3: .info-item ---
    Se aplica a 6 elementos en el HTML */
+
+
 .info-item {
     padding: 20px;
+    display: grid;
+    margin-top: 40px;
+    max-width: 1600px;
+    position: relative;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+    border-radius: 0px;
 }
 
 .info-item h3 {
     color: rgb(255, 255, 255);
-    font-size: 1.1em;
+    font-size: 1em;
     margin: 0 0 10px 0;
     text-transform: uppercase;
     font-weight: 600;
@@ -238,7 +202,7 @@ p {
 
 .info-item p {
     color: rgb(240, 239, 239);
-    font-size: 1em;
+    font-size: 0,2em;
     margin: 0;
 }
 
@@ -289,28 +253,31 @@ p {
 .content-section,
 .about-section,
 .theme-section,
+
+
 .why-watch-section,
+
 .topics-section,
 .info-section {
-    padding: 60px 40px;
+    padding: 40px 40px;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .hero-text h1 {
-    font-size: 3.5em;
-    color: white;
-    margin: 0 0 20px 0;
+    font-size: 2.5em;
+    color: rgb(166, 166, 166);
+    margin: 20px 0 20px 0;
     font-weight: 700;
-    letter-spacing: -1px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
 .hero-text .subtitle {
-    font-size: 1.5em;
+    font-size: 1em;
     color: rgb(255, 255, 255);
-    margin: 0;
+    margin: 400px 20px 400px 20px;
     font-weight: 400;
     line-height: 1.6;
 }
@@ -329,8 +296,8 @@ p {
 .info-section h2 {
     font-size: 2.5em;
     color: white;
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin-top: 200px;
+    padding: auto;
     text-transform: uppercase;
     letter-spacing: -0.5px;
 }
@@ -360,13 +327,14 @@ p {
 
 .reasons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(1000px, 2fr));
     gap: 30px;
     margin-top: 40px;
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
+   
 
 .info-grid {
     display: grid;
