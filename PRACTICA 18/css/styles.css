@@ -34,15 +34,15 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
-    background-color: #e94560;
+    background-color: #3200fb;
     border: none;
-    border-radius: 10px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 #boton:hover {
-    background-color: #c81e45;
+    background-color: #0e0043;
     transform: scale(1.05);
 }
 
