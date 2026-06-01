@@ -1,0 +1,124 @@
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: #e63946;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+}
+
+/* ===== Main ===== */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* ===== Tarjeta producto ===== */
+.producto {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 35px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.producto h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+/* ===== Filas ===== */
+.detalle {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.etiqueta {
+    color: #666;
+}
+
+.valor {
+    font-weight: 700;
+}
+
+/* ===== Precio original tachado ===== */
+#precioOriginal {
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* ===== Badge descuento ===== */
+.descuento .valor {
+    color: #e63946;
+    background-color: #ffe0e3;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+}
+
+/* ===== Separador ===== */
+.separador {
+    border-top: 2px dashed #e0e0e0;
+    margin: 6px 0;
+}
+
+/* ===== Total ===== */
+.total .etiqueta {
+    color: #222;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.total .valor {
+    color: #2d6a4f;
+    font-size: 1.4rem;
+}
+
+/* ===== Ahorro ===== */
+.ahorro {
+    margin-top: 20px;
+    background-color: #2d6a4f;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.ahorro span {
+    font-weight: 700;
+}
